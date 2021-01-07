@@ -1,0 +1,129 @@
+/*Insigne css libary*/
+
+/*HTML element rulesets and overrides*/
+
+/*Default coloring*/
+:root {
+  --bg-main: #14ab89;
+  --bg-alt: #e1f2f0;
+  --txt-main: #000000;
+  --txt-alt: #ffffff;
+}
+
+html {
+  font-family: Trebuchet, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/*HTML class rulesets*/
+
+.ins-container {
+  margin: 10px 0;
+}
+
+/*Tablet breakpoint*/
+@media (max-width:300px){
+  .ins-responsive {
+    text-align: center;
+    width: 100%;
+  }
+}
+/*Desktop breakpoint*/
+@media (max-width:900px){
+  .ins-responsive {
+    margin-top: 6px;
+    min-width: 50%;
+  }
+}
+
+.ins-card,.ins-button {
+  padding: 6px;
+  background-color: var(--txt-alt);
+  border: 2px solid var(--bg-main);
+  box-shadow: 1px 1px 4px var(--txt-main);
+}
+
+.ins-card {
+  box-shadow: 1px 1px 4px var(--txt-main);
+}
+
+.ins-button {
+  box-shadow: 0.5px 0.5px 2px var(--txt-main);
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.ins-button:hover {
+  background-color: var(--bg-alt);
+}
+
+.ins-button:active {
+  background-color: var(--bg-main);
+  color: var(--txt-alt);
+}
+
+.ins-anchor {
+    color: var(--bg-main);
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+.ins-anchor:hover {
+  text-decoration: underline;
+}
+
+.ins-anchor:active {
+  text-decoration: underline;
+  color: var(--text-main);
+}
+
+.ins-table {
+  border-collapse: collapse;
+}
+
+.ins-table th,td {
+  padding: 6px;
+  text-align: center;
+}
+
+.ins-table td {
+  border-top: 2px solid var(--bg-main);
+}
+
+.ins-list {
+  color: var(--bg-main);
+  max-width: 4vw;
+}
+
+.ins-list li {
+  border-right: 2px solid var(--bg-alt);
+}
+
+ul.ins-list {
+  list-style-type: square;
+}
+
+.ins-form {
+  display: inline-grid;
+}
+
+.ins-form .ins-label {
+  padding: 6px 0;
+}
+
+.ins-form .ins-input[type=text] {
+  border: 2px solid var(--bg-main);
+  box-shadow: 0.2px 0.2px 2px var(--txt-main);
+  transition: background-color 0.1s, box-shadow 0.1s;
+}
+
+.ins-form .ins-input[type=text]:hover {
+  background-color: var(--bg-alt);
+}
+
+.ins-form .ins-input[type=text]:focus {
+  background-color: var(--bg-alt);
+  box-shadow: 0.3px 0.3px 3px var(--txt-main);
+}
